@@ -1,0 +1,9 @@
+footer.container div.container-fluid {
+  justify-content: flex-end;
+}
+
+main.container {
+  flex: 1 1 auto;
+
+  padding: calc(var(--bs-gutter-x) * .5);
+}
