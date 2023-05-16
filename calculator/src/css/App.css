@@ -1,0 +1,63 @@
+/* App component styles */
+/* theme colors */
+.container.dark {
+  --fonst-color: var(--fonst-color-dark);
+  --tablet-bg: var(--tablet-bg-dark);
+  --tablet-border-color: var(--tablet-border-color-dark);
+  --up-numbers-color: var(--up-numbers-color-dark);
+
+  /* btns */
+  --funcs-bg: var(--funcs-bg-col-dark);
+  --funcs-bg-active: var(--funcs-bg-active-col-dark);
+  --numbs-bg: var(--numbs-bg-col-dark);
+  --numbs-bg-active: var(--numbs-bg-active-col-dark);
+  --equals: var(--equals-dark);
+  --equals-active: var(--equals-active-dark);
+  --equals-font-col: var(--fonst-color-light);
+}
+
+.container.light {
+  --fonst-color: var(--fonst-color-light);
+  --tablet-bg: var(--tablet-bg-light);
+  --tablet-border-color: var(--tablet-border-color-light);
+  --up-numbers-color: var(--up-numbers-color-light);
+
+  /* btns */
+  --funcs-bg: var(--funcs-bg-col-light);
+  --funcs-bg-active: var(--funcs-bg-active-col-light);
+  --numbs-bg: var(--numbs-bg-col-light);
+  --numbs-bg-active: var(--numbs-bg-active-col-light);
+  --equals: var(--equals-light);
+  --equals-active: var(--equals-active-light);
+  --equals-font-col: var(--fonst-color-dark);
+}
+
+/* other */
+.container,
+.row,
+.col {
+  height: 100%;
+
+  color: var(--fonst-color);
+}
+
+.row {
+  align-items: center
+}
+
+.col-md-auto {
+  width: 420px;
+  height: 540px;
+}
+
+@media (max-width: 480px) {
+  .col-md-auto {
+    padding: 0 5%;
+
+    width: 100%;
+  }
+
+  .col {
+    display: none;
+  }
+}

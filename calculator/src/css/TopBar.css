@@ -1,0 +1,59 @@
+/* icons */
+.material-symbols-outlined {
+  color: var(--fonst-color);
+  background-color: transparent;
+}
+
+.dark .material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 20
+}
+
+.light .material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 20
+}
+
+/* othe styles */
+.top__bar,
+.top__box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.top__bar {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  height: 32px;
+
+  padding: 0 2%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.top__text {
+  margin: 0;
+  margin-left: 8px;
+  padding: 0;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  cursor: default;
+}
+
+button.material-symbols-outlined:hover,
+button.material-symbols-outlined:focus {
+  font-variation-settings:
+    'opsz' 24
+}

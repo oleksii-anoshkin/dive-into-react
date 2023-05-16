@@ -1,0 +1,61 @@
+.buttons__container {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+
+  padding: 1%;
+
+  gap: 4px;
+}
+
+.btn-app {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--fonst-color);
+
+  border-radius: 4px;
+
+  box-shadow: 0px 0px 1px var(--tablet-shadow);
+}
+
+.btn-app.funcs {
+  background-color: var(--funcs-bg);
+}
+
+.btn-app.funcs:hover,
+.btn-app.funcs:focus {
+  background-color: var(--funcs-bg-active);
+}
+
+.btn-app.funcs:active {
+  background-color: var(--funcs-bg);
+}
+
+.btn-app.number {
+  background-color: var(--numbs-bg);
+}
+
+.btn-app.number:hover,
+.btn-app.number:focus {
+  background-color: var(--numbs-bg-active);
+}
+
+.btn-app.number:active {
+  background-color: var(--numbs-bg);
+}
+
+.btn-app.equals {
+  color: var(--equals-font-col);
+  background-color: var(--equals);
+}
+
+.btn-app.equals:hover,
+.btn-app.equals:focus {
+  background-color: var(--equals-active);
+}
+
+.btn-app.equals:active {
+  background-color: var(--equals);
+}
