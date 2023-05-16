@@ -1,0 +1,51 @@
+.numbers__container {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.numbers__top,
+.numbers__bot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.numbers__top {
+  height: 40px;
+
+  padding: 0 4%;
+}
+
+.numbers__bot {
+  height: 80px;
+}
+
+.numbers__top-text {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--up-numbers-color);
+}
+
+.numbers__bot-text {
+  padding: 0 3%;
+
+  width: 100%;
+
+  text-align: end;
+  font-weight: 400;
+  font-size: 44px;
+  color: var(--fonst-color);
+
+  background: transparent;
+
+  border-radius: 4px;
+}

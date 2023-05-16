@@ -1,0 +1,52 @@
+/* reset styles */
+@import "./reset.css";
+
+/* import component styles */
+@import "./App.css";
+@import "./Tablet.css";
+@import "./TopBar.css";
+@import "./UserOutput.css";
+@import "./Buttons.css";
+
+/* root */
+:root {
+  /* font */
+  --font-family: 'Montserrat', sans-serif;
+
+  /* dark theme */
+  --fonst-color-dark: #fff;
+  --tablet-bg-dark: #20211b;
+  --tablet-border-color-dark: #454543;
+  --up-numbers-color-dark: #a0a1a1;
+  /* btns */
+  --funcs-bg-col-dark: #313331;
+  --funcs-bg-active-col-dark: #3b3d3a;
+  --numbs-bg-col-dark: #3a3c37;
+  --numbs-bg-active-col-dark: #31332e;
+  --equals-dark: #4cc2ff;
+  --equals-active-dark: #47b1e8;
+
+  /* light theme */
+  --fonst-color-light: #000;
+  --tablet-bg-light: #eff5ef;
+  --tablet-border-color-light: #a6a6a6;
+  --up-numbers-color-light: #5f6263;
+  /* btns */
+  --funcs-bg-col-light: #f6fbf5;
+  --funcs-bg-active-col-light: #f8fbef;
+  --numbs-bg-col-light: #ffffff;
+  --numbs-bg-active-col-light: #fbfdf9;
+  --equals-light: #0067c0;
+  --equals-active-light: #1975c2;
+
+  /* other */
+  --tablet-shadow: rgba(0, 0, 0, .5);
+}
+
+/* general styles */
+.wrap {
+  width: 100%;
+  height: 100vh;
+
+  font-family: var(--font-family);
+}

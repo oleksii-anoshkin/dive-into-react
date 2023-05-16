@@ -1,0 +1,22 @@
+/* Tablet component styles */
+.container-fluid {
+  display: grid;
+  grid-template: 32px 120px 1fr / 1fr;
+
+  padding: 0;
+
+  height: 100%;
+
+  background-color: var(--tablet-bg);
+
+  border: 1px solid var(--tablet-border-color);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  box-shadow: 0px 0px 12px var(--tablet-shadow);
+
+  cursor: default;
+}
