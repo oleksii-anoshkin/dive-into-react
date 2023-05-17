@@ -1,4 +1,11 @@
+// imports
+import { useState } from "react";
+
 export default function Buttons({ history, setHistory, result, setResult }) {
+  // states
+  const [logs, setLogs] = useState([]);
+  const [logId, setLogId] = useState(1);
+
   // classes
   const containerClass = "buttons__container";
   const allBtnClass = "btn-app";
@@ -26,75 +33,19 @@ export default function Buttons({ history, setHistory, result, setResult }) {
     }
   }
 
-  function add() {
+  function arithmeticFunc(key) {
     let resultValue;
 
     switch (true) {
       case history.length === 0 || history.length === 4 || history.length === 1:
-        setHistory([].concat(result, "+"));
+        setHistory([].concat(result, key));
         break;
 
       case history.length === 2:
         resultValue = calcFunc(history[1], history[0], result);
         setResult(resultValue);
-        setHistory([].concat(resultValue, "+"));
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  function subtract() {
-    let resultValue;
-
-    switch (true) {
-      case history.length === 0 || history.length === 4 || history.length === 1:
-        setHistory([].concat(result, "-"));
-        break;
-
-      case history.length === 2:
-        resultValue = calcFunc(history[1], history[0], result);
-        setResult(resultValue);
-        setHistory([].concat(resultValue, "-"));
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  function multiply() {
-    let resultValue;
-
-    switch (true) {
-      case history.length === 0 || history.length === 4 || history.length === 1:
-        setHistory([].concat(result, "x"));
-        break;
-
-      case history.length === 2:
-        resultValue = calcFunc(history[1], history[0], result);
-        setResult(resultValue);
-        setHistory([].concat(resultValue, "x"));
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  function divide() {
-    let resultValue;
-
-    switch (true) {
-      case history.length === 0 || history.length === 4 || history.length === 1:
-        setHistory([].concat(result, "/"));
-        break;
-
-      case history.length === 2:
-        resultValue = calcFunc(history[1], history[0], result);
-        setResult(resultValue);
-        setHistory([].concat(resultValue, "/"));
+        setHistory([].concat(resultValue, key));
+        logger(resultValue);
         break;
 
       default:
@@ -109,19 +60,57 @@ export default function Buttons({ history, setHistory, result, setResult }) {
       case history.length === 0 || history[1] === "=":
         setResult(result);
         setHistory([].concat(result, "="));
+        logger(result);
         break;
 
       case history.length === 2:
         resultValue = calcFunc(history[1], history[0], result);
         setHistory([].concat(history, result, "="));
         setResult(resultValue);
+        logger(resultValue);
         break;
 
       case history.length === 4:
         resultValue = calcFunc(history[1], history[2], result);
         setHistory([].concat(result, history[1], history[2], "="));
         setResult(resultValue);
+        logger(resultValue);
         break;
+
+      default:
+        break;
+    }
+  }
+
+  function logger(resultValue) {
+    const msg = `
+    First operand: ${history[0] ? history[0] : result}
+    Second operand: ${result ? result : ""}
+    Operation: ${history[1] ? setOperation(history[1]) : "equals"}
+    Result: ${resultValue}
+    `;
+    setLogs(() =>
+      logs
+        ? [].concat(logs, { id: `operation-${logId}`, text: msg })
+        : [].concat({ id: `operation-${logId}`, text: msg })
+    );
+    setLogId(logId + 1);
+    console.log(msg);
+  }
+
+  function setOperation(key) {
+    switch (key) {
+      case "+":
+        return "add, '+'";
+
+      case "-":
+        return "subtract, '-'";
+
+      case "/":
+        return "divide, '/'";
+
+      case "x":
+        return "multiply, 'x'";
 
       default:
         break;
@@ -201,7 +190,7 @@ export default function Buttons({ history, setHistory, result, setResult }) {
       <button
         className={`${allBtnClass} ${funcsBtnClaas}`}
         type="button"
-        onClick={divide}>
+        onClick={() => arithmeticFunc("/")}>
         &#247;
       </button>
       <button
@@ -237,7 +226,7 @@ export default function Buttons({ history, setHistory, result, setResult }) {
       <button
         className={`${allBtnClass} ${funcsBtnClaas}`}
         type="button"
-        onClick={multiply}>
+        onClick={() => arithmeticFunc("x")}>
         x
       </button>
       <button
@@ -273,7 +262,7 @@ export default function Buttons({ history, setHistory, result, setResult }) {
       <button
         className={`${allBtnClass} ${funcsBtnClaas}`}
         type="button"
-        onClick={subtract}>
+        onClick={() => arithmeticFunc("-")}>
         -
       </button>
       <button
@@ -309,7 +298,7 @@ export default function Buttons({ history, setHistory, result, setResult }) {
       <button
         className={`${allBtnClass} ${funcsBtnClaas}`}
         type="button"
-        onClick={add}>
+        onClick={() => arithmeticFunc("+")}>
         +
       </button>
       <button
