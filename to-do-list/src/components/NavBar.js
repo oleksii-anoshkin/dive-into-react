@@ -5,7 +5,7 @@ export default function NavBar({ todos, setTodos, todoText, setTodoText }) {
   // classes
   const navClass = "navbar bg-body-tertiary";
   const containerClass = "container-fluid";
-  const titleClass = "navbar-brand mb-0 h1";
+  const titleClass = "navbar-brand h1";
   const formClass = "d-flex";
   const inputClass = "form-control me-2";
   const btnClass = "btn btn-secondary";
@@ -13,7 +13,7 @@ export default function NavBar({ todos, setTodos, todoText, setTodoText }) {
   // texts
   const titleText = "TODO List";
   const inputAriaText = "Add Todo";
-  const btnText = "Add Todo";
+  const btnText = "Add";
   const idTodoName = "todo";
 
   // states

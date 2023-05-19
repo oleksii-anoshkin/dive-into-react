@@ -5,6 +5,7 @@ export default function Todos({ todos, hideCompleted, setTodos }) {
   const todosClass = "list-group";
   const todoClass = "list-group-item";
   const checkInputClass = "form-check-input me-1";
+  const todoBoxClass = "input-label-box";
   const checkInputLabelClass = "form-check-label";
   const closeBtnClass = "btn-close";
 
@@ -12,7 +13,12 @@ export default function Todos({ todos, hideCompleted, setTodos }) {
   const closeBtnAria = "delete todo";
 
   // variables
-  const visibleTodos = todos.filter((todo) => {
+  const newTodos = [].concat(
+    todos.filter((todo) => todo.done === false),
+    todos.filter((todo) => todo.done === true)
+  );
+
+  const visibleTodos = newTodos.filter((todo) => {
     return hideCompleted ? !todo.done : todo;
   });
 
@@ -40,7 +46,7 @@ export default function Todos({ todos, hideCompleted, setTodos }) {
     <ul className={todosClass}>
       {visibleTodos.map((todo) => (
         <li className={todoClass} key={todo.id}>
-          <div>
+          <div className={todoBoxClass}>
             <input
               className={checkInputClass}
               type="checkbox"

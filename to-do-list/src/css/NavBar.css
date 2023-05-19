@@ -1,7 +1,21 @@
 nav button.btn-secondary {
-  width: 160px;
+  width: 120px;
 }
 
 span.navbar-brand {
+  margin: 20px 0;
   cursor: default;
+
+  font-size: 36px;
+}
+
+@media (max-width: 500px) {
+  span.navbar-brand {
+    margin: 12px 0;
+    font-size: 32px;
+  }
+}
+
+.d-flex {
+  margin-bottom: 12px;
 }
