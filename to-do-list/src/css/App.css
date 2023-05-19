@@ -1,9 +1,18 @@
-footer.container div.container-fluid {
-  justify-content: flex-end;
+#root > .container-fluid {
+  max-width: 768px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
 }
 
 main.container {
   flex: 1 1 auto;
 
   padding: calc(var(--bs-gutter-x) * .5);
+}
+
+footer .d-flex {
+  margin-bottom: 0;
 }
