@@ -1,11 +1,5 @@
 // imports
-import { useState } from "react";
-
 export default function Buttons({ history, setHistory, result, setResult }) {
-  // states
-  const [logs, setLogs] = useState([]);
-  const [logId, setLogId] = useState(1);
-
   // classes
   const containerClass = "buttons__container";
   const allBtnClass = "btn-app";
@@ -37,7 +31,15 @@ export default function Buttons({ history, setHistory, result, setResult }) {
     let resultValue;
 
     switch (true) {
-      case history.length === 0 || history.length === 4 || history.length === 1:
+      case history.length === 0:
+        setHistory([].concat(result, key));
+        break;
+
+      case history.length === 4:
+        setHistory([].concat(result, key));
+        break;
+
+      case history.length === 1:
         setHistory([].concat(result, key));
         break;
 
@@ -57,7 +59,13 @@ export default function Buttons({ history, setHistory, result, setResult }) {
     let resultValue;
 
     switch (true) {
-      case history.length === 0 || history[1] === "=":
+      case history.length === 0:
+        setResult(result);
+        setHistory([].concat(result, "="));
+        logger(result);
+        break;
+
+      case history[1] === "=":
         setResult(result);
         setHistory([].concat(result, "="));
         logger(result);
@@ -89,12 +97,6 @@ export default function Buttons({ history, setHistory, result, setResult }) {
     Operation: ${history[1] ? setOperation(history[1]) : "equals"}
     Result: ${resultValue}
     `;
-    setLogs(() =>
-      logs
-        ? [].concat(logs, { id: `operation-${logId}`, text: msg })
-        : [].concat({ id: `operation-${logId}`, text: msg })
-    );
-    setLogId(logId + 1);
     console.log(msg);
   }
 

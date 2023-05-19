@@ -1,3 +1,4 @@
+/* top bar styles */
 /* icons */
 .material-symbols-outlined {
   color: var(--fonst-color);
@@ -20,7 +21,7 @@
     'opsz' 20
 }
 
-/* othe styles */
+/* other top bar styles */
 .top__bar,
 .top__box {
   display: flex;
