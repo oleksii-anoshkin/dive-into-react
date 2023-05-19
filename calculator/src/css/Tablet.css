@@ -1,4 +1,4 @@
-/* Tablet component styles */
+/* tablet styles */
 .container-fluid {
   display: grid;
   grid-template: 32px 120px 1fr / 1fr;
