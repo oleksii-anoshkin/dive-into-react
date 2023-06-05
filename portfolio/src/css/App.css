@@ -1,0 +1,98 @@
+* {
+  cursor: default;
+}
+
+/* fonts */
+.title-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.208;
+  color: inherit;
+}
+
+.subtitle-text {
+  font-weight: 600;
+  font-size: inherit;
+  line-height: 1.388;
+  color: inherit;
+}
+
+.link-text {
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1.222;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.1s linear 0s;
+}
+
+.link-text:hover,
+.link-text:focus {
+  color: var(--brown);
+}
+
+/* boxes */
+.min-container {
+  padding: 8.379% 0 13.064%;
+  width: 100%;
+}
+
+.max-container {
+  margin: 0 -14.865%;
+  padding: 8.379% 14.865% 13.064%;
+  min-width: 129.73%;
+}
+
+/* bg */
+.top-bg {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: url(../images/hero-bg.jpg) center center / cover no-repeat;
+}
+
+/* media */
+@media (max-width: 1280px) {
+  .title-text {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .min-container {
+    padding: 8.361% 0;
+  }
+
+  .max-container {
+    margin: 0 -10.29%;
+    padding: 8.361% 10.29%;
+    min-width: 120.58%;
+  }
+
+  .title-text {
+    font-size: 21px;
+  }
+
+  .top-bg {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 496px) {
+  .title-text {
+    font-size: 20px;
+  }
+
+  .subtitle-text,
+  .link-text {
+    font-size: 14px;
+  }
+}
