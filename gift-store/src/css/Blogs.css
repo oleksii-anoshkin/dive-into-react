@@ -1,0 +1,268 @@
+/* general */
+.blogs__container,
+.blogs__titles,
+.primary-new__content,
+.blogs__cards,
+.blogs__card {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.blogs__container {
+  padding: 6.112% 9.375% 5.556%;
+
+  cursor: default;
+}
+
+.blogs__titles {
+  align-items: center;
+  justify-content: center;
+}
+
+.blogs__title {
+  margin-bottom: 2.052%;
+
+  font-size: 32px;
+  line-height: 1.1875;
+}
+
+.blogs__subtitle {
+  margin-bottom: 6.154%;
+
+  font-size: 18px;
+  line-height: 1.333;
+}
+
+/* first new */
+.blogs__primary-new.primary-new {
+  display: grid;
+  grid-template: 1fr / 34.188% 65.812%;
+
+  margin-bottom: 3.419%;
+
+  color: var(--secondary-font);
+  background-color: var(--black-bg);
+}
+
+.primary-new__img {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  padding: 46.250% 0;
+
+  background: url("../images/blog.jpg") left center / cover no-repeat;
+}
+
+.primary-new__content {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  padding: 8.312% 25.975% 6.234% 10.130%;
+}
+
+.primary-new__autor {
+  margin-bottom: 5.692%;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.primary-new__title {
+  margin-bottom: 12.196%;
+
+  font-size: 48px;
+  line-height: 1.208;
+}
+
+.primary-new__link {
+  width: max-content;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--secondary-font);
+}
+
+/* cards */
+.blogs__cards {
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.blogs__card {
+  flex: 0 1 48.718%;
+  justify-content: space-between;
+  padding: 4.103%;
+
+  transition: all 0.15s linear 0s;
+  cursor: pointer;
+}
+
+.blogs__card:hover,
+.blogs__card:focus {
+  box-shadow: var(--shadow);
+}
+
+.blogs__card-title {
+  margin-bottom: 3.377%;
+
+  min-height: 2.8em;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.blogs__card-text {
+  margin-bottom: 7.595%;
+
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.blogs__card-link.link {
+  width: max-content;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* media */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .blogs__card-title {
+    font-size: 22px;
+  }
+
+  .blogs__card-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .primary-new__title {
+    font-size: 36px;
+  }
+
+  .primary-new__link {
+    font-size: 16px;
+  }
+
+  .blogs__card-title {
+    font-size: 20px;
+  }
+
+  .blogs__card-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 860px) and (min-width: 769px) {
+  .blogs__card-title {
+    font-size: 18px;
+  }
+
+  .blogs__card-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-new__title {
+    font-size: 32px;
+  }
+
+  .primary-new__link,
+  .primary-new__autor {
+    font-size: 13px;
+  }
+
+  .blogs__cards {
+    flex-flow: column nowrap;
+  }
+
+  .blogs__card {
+    flex: 1 1 auto;
+    margin: 2% 0;
+  }
+
+  .blogs__card-title {
+    min-height: 2.8em;
+    max-width: 500px;
+  }
+
+  .blogs__title,
+  .blogs__subtitle {
+    text-align: center;
+  }
+
+  .blogs__card-title {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 680px) and (min-width: 497px) {
+
+  .primary-new__autor,
+  .primary-new__link {
+    font-size: 12px;
+  }
+
+  .primary-new__title {
+    font-size: 26px;
+  }
+
+}
+
+@media (max-width: 580px) and (min-width: 497px) {
+  .primary-new__title {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 496px) {
+  .blogs__primary-new.primary-new {
+    grid-template: 65.812% 34.188% / 1fr;
+  }
+
+  .primary-new__img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    padding: 50% 0;
+  }
+
+  .primary-new__content {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding: 6.234% 10.130%;
+  }
+
+  .primary-new__autor,
+  .primary-new__link {
+    font-size: 11px;
+  }
+
+  .primary-new__autor {
+    margin-bottom: 5.692%;
+  }
+
+  .primary-new__title {
+    margin-bottom: 12.196%;
+
+    font-size: 26px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .primary-new__title {
+    font-size: 20px;
+  }
+
+  .blogs__card-title {
+    font-size: 22px;
+  }
+
+  .blogs__card-text {
+    font-size: 16px;
+  }
+
+  .blogs__card-link.link {
+    font-size: 13px;
+  }
+}
