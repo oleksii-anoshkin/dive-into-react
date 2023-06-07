@@ -1,0 +1,64 @@
+/* import */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto&display=swap');
+@import url('../css/reset.css');
+@import url('../css/btns.css');
+@import url('../css/links.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* fonts */
+  --font-questrial: 'Questrial', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+
+  /* colors */
+  --white: #ffffff;
+  --secondary-white: #FAFAFA;
+  --gray: #F1F1F2;
+  --orange: #F7941E;
+  --black: #000000;
+  --secondary-black: #231F20;
+
+  /* shadow */
+  --shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+
+  /* colors */
+  --primary-font: var(--black);
+  --secondary-font: var(--white);
+  --primary-bg: var(--white);
+
+  /* bg colors */
+  --secondary-bg: var(--secondary-white);
+  --gray-bg: var(--gray);
+  --black-bg: var(--secondary-black);
+  --orange-bg: var(--orange);
+
+  /* animation */
+  --animation: wave 0.25s ease-in-out;
+}
+
+.wrap {
+  width: 100%;
+
+  font-family: var(--font-questrial);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140.62%;
+
+  color: var(--primary-font);
+  background-color: var(--primary-bg);
+}
+
+/* animation */
+@keyframes wave {
+  25% {
+    transform: rotate(15deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+}

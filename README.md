@@ -1,6 +1,10 @@
 # dive-into-react
 
-- [React Tutorial: Tic-tac-toe](https://tic-tac-toe-tutor-react.netlify.app)
-- [React Practice: TODO-List](https://todo-list-practice-react.netlify.app)
-- [React Practice: Calculator](https://calculator-practice-react.netlify.app/)
-- [React Practice: Portfolio](https://portfolio-web-site-react.netlify.app/)
+## React Practice:
+
+- [Tic-tac-toe](https://tic-tac-toe-tutor-react.netlify.app)
+- [TODO-List](https://todo-list-practice-react.netlify.app)
+- [Calculator](https://calculator-practice-react.netlify.app/)
+- [Portfolio Adam Zakob](https://github.com/oleksii-anoshkin/test-portfolio-website)
+- [Portfolio Théophile Seyrig](https://github.com/oleksii-anoshkin/test-portfolio-website-2)
+- [Gift Store](https://github.com/oleksii-anoshkin/gift-store-website)

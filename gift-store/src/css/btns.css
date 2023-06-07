@@ -1,0 +1,52 @@
+/* btns*/
+.light-orange-btn,
+.orange-btn,
+.light-black-btn,
+.black-btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  line-height: 1.222;
+  text-transform: uppercase;
+
+  border: 1px solid var(--secondary-font);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s linear 0s;
+}
+
+/* btns colors */
+.light-orange-btn,
+.orange-btn:hover,
+.orange-btn:focus {
+  color: var(--orange);
+  border-color: var(--orange);
+  background-color: transparent;
+}
+
+.orange-btn,
+.light-orange-btn:hover,
+.light-orange-btn:focus {
+  color: var(--white);
+  border-color: var(--orange);
+  background-color: var(--orange);
+}
+
+.light-black-btn,
+.black-btn:hover,
+.black-btn:focus {
+  color: var(--secondary-black);
+  border-color: var(--secondary-black);
+  background-color: transparent;
+}
+
+.black-btn,
+.light-black-btn:hover,
+.light-black-btn:focus {
+  color: var(--white);
+  border-color: var(--secondary-black);
+  background-color: var(--secondary-black);
+}
