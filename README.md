@@ -8,4 +8,4 @@
 - [Portfolio Adam Zakob](https://github.com/oleksii-anoshkin/test-portfolio-website)
 - [Portfolio Théophile Seyrig](https://github.com/oleksii-anoshkin/test-portfolio-website-2)
 - [Gift Store](https://github.com/oleksii-anoshkin/gift-store-website)
-- [Test Blog App](https://...)
+- [Test Blog App](https://github.com/oleksii-anoshkin/test-app-blog/tree/main)
